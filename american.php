@@ -37,14 +37,14 @@
         </ol>
     </section>
         <section id="glowny">
-            <img src="peruwianka.jpg" alt="Świnka morska rasy peruwianka">
+            <img src="american.jpg" alt="Świnka morska rasy american">
             <?php
 
                 // ! SKRYPT 2
 
                 $PDO = new PDO('mysql:host=localhost;dbname=hodowla;port=3306;charset=utf8', 'root', '');
 
-                $stmt = $PDO->query('SELECT DISTINCT `data_ur`, `miot`, `rasy`.`rasa` FROM `swinki` INNER JOIN `rasy` ON `rasy`.`id` = `swinki`.`rasy_id` WHERE `swinki`.`rasy_id` = 1');
+                $stmt = $PDO->query('SELECT DISTINCT `data_ur`, `miot`, `rasy`.`rasa` FROM `swinki` INNER JOIN `rasy` ON `rasy`.`id` = `swinki`.`rasy_id` WHERE `swinki`.`rasy_id` = 6');
 
                 foreach($stmt as $row){
 
@@ -63,7 +63,7 @@
 
                 $PDO = new PDO('mysql:host=localhost;dbname=hodowla;port=3306;charset=utf8', 'root', '');
 
-                $stmt = $PDO->query('SELECT `imie`, `cena`, `opis` FROM `swinki` WHERE `rasy_id` = 1');
+                $stmt = $PDO->query('SELECT `imie`, `cena`, `opis` FROM `swinki` WHERE `rasy_id` = 6');
 
                 foreach($stmt as $row){
 
